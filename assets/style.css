@@ -1,0 +1,17 @@
+body{
+    background-image: url("http://www.4freephotos.com/medium/u2/Train-leaving-the-station1956.jpg");
+    background-size: 100%
+}
+
+.jumbotron {
+    background-color: rgba(55, 55, 253, 0.884);
+    color: black;  
+    font-family: 'Monoton', cursive;
+}
+
+.container{
+    opacity: .8;
+    
+    margin: auto;
+}
+

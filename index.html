@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+
+
+    <!-- Bootstrap CSS CDN  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="assets/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1 class="text-center">
+                ALL ABOARD!!!
+            </h1>
+        </div>
+    </div>
+    <div class="row container">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Current Train Schedule</div>
+            <div class="panel-body">
+                <table class="table" id="train-table">
+                    <thead>
+                        <tr>
+                            <th>Train Name</th>
+                            <th>Destination</th>
+                            <th>First Train time</th>
+                            <th>Frequency (min)</th>
+                            <th>Next Arrival</th>
+                            <th>Minutes Away</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="row container">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Add New Train</div>
+            <div class="panel-body">
+                <form>
+                    <div class="form-group">
+                        <label for="name-input">Train Name:</label>
+                        <input type="text" class="form-control" id="train-name-input" placeholder="Enter Train Name Here">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="role-input">Destination:</label>
+                        <input type="text" class="form-control" id="destination-input" placeholder="Destination">
+                    </div>
+                    <div class="form-group">
+                        <label for="date-input">First Train Time (HH:min - military time):</label>
+                        <input type="text" class="form-control" id="time-input" placeholder="Time">
+
+                        <div class="form-group">
+                            <label>Frequency (min):</label>
+                            <input type="text" class="form-control" id="freq-input" placeholder="mins">
+                        </div>
+                        <button id="submit-now" type="submit" class="btn btn-primary">Submit</button>
+
+                </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/main.js"></script>
+
+
+
+</body>
+
+</html>
